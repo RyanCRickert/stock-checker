@@ -1,33 +1,102 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #282c34;
+}
+
+#graph {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
+  align-items: center;
   background-color: #282c34;
-  min-height: 100vh;
+  color: white;
   display: flex;
   flex-direction: column;
+  height: 20vh;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.App-button {
+  background-color: rgb(16, 89, 175);
+  border: none;
+  border-radius: 10px;
+  color: cornsilk;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 5px;
+  padding: 10px;
+  user-select: none;
+}
+
+.App-input {
+  height: 25px;
+  margin-top: 30px;
+  padding: 0 10px;
+  width: 100px;
+}
+
+.graph-header {
+  border: 1px solid;
+  height: 50px;
+  margin: 0 auto;
+  width: 1400px;
+}
+
+.modal {
+  align-content: center;
+  background-color: rgb(16, 19, 175);
+  border-radius: 10px;
+  color: cornsilk;
+  height: 300px;
+  outline: none;
+  margin: auto;
+  width: 300px;
+}
+
+.modal-button {
+  background-color: rgb(16, 89, 175);
+  border: none;
+  border-radius: 10px;
+  color: cornsilk;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 35%;
+  padding: 10px;
+  user-select: none;
+  width: 30%
+}
+
+.modal-container {
+  height: 100%;
+}
+
+.modal-message {
+  font-size: 22px;
+  height: 80%;
+  padding: 15px;
+  text-align: center;
+  user-select: none;
+}
+
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
   align-items: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: opacity 200ms ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
 }
